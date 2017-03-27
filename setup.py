@@ -19,6 +19,7 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 import os
+import platform
 from distutils.core import setup
 
 
@@ -27,7 +28,7 @@ def _read(fname):
 
 
 requirements = ['six']
-if os.uname()[0].lower() == 'darwin':
+if platform.uname()[0].lower() == 'darwin':
     requirements.append('netifaces (>= 0.5)')
 
 
